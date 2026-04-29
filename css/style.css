@@ -1,0 +1,87 @@
+/* ============================================
+   ESTILOS PERSONALIZADOS — CONCURSO ISC 2026
+   ============================================ */
+
+/* Variables de color — CAMBIA el color primario si quieres */
+:root {
+    --color-primario: #0d6efd;
+    --color-fondo: #f8f9fa;
+}
+
+body {
+    background-color: var(--color-fondo);
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+/* Navbar mejorada */
+.navbar {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* Cards con hover */
+.card {
+    border-radius: 12px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1) !important;
+}
+
+/* Tabla */
+.table thead th {
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
+.table tbody tr {
+    vertical-align: middle;
+}
+.table tbody tr:hover {
+    background-color: rgba(13, 110, 253, 0.05);
+}
+
+/* Botones con bordes redondeados */
+.btn {
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+/* Formularios */
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--color-primario);
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.2);
+}
+.form-control,
+.form-select {
+    border-radius: 8px;
+}
+
+/* Hero banner */
+.bg-primary.rounded-3 {
+    background: linear-gradient(135deg, #0d6efd 0%, #0043a8 100%) !important;
+}
+
+/* Badges */
+.badge {
+    font-size: 0.8em;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+}
+
+/* Responsive tabla en móvil */
+@media (max-width: 768px) {
+    .display-6 {
+        font-size: 1.3rem;
+    }
+    .display-4 {
+        font-size: 1.8rem;
+    }
+}
