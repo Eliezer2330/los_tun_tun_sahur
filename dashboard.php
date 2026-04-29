@@ -2,6 +2,12 @@
 // ── Conexión a la base de datos sigmea ──────────────────────────
 session_start();
 
+// Proteger página: si no hay sesión, redirigir al login
+if (empty($_SESSION['user_id'])) {
+    header('Location: login.php');
+    exit;
+}
+
 $dbHost = 'localhost';
 $dbPort = '3308';
 $dbName = 'sigmea';
@@ -951,6 +957,9 @@ try {
             <a class="nav-item" href="reportes.php">
                 <span class="ico">📈</span> Reportes
             </a>
+            <a class="nav-item" href="pages/logout.php">
+                <span class="ico">⏻</span> Cerrar sesión
+            </a>
         </nav>
 
         <div class="sidebar-footer">
@@ -960,7 +969,7 @@ try {
                     <div class="user-name" id="user-name">Administrador</div>
                     <div class="user-role" id="user-role">admin</div>
                 </div>
-                <button class="logout-btn" onclick="logout()" title="Cerrar sesión">⏻</button>
+                <button class="logout-btn" onclick="window.location='pages/logout.php'" title="Cerrar sesión">⏻</button>
             </div>
         </div>
     </aside>
